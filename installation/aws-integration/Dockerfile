@@ -7,7 +7,7 @@ RUN yum install openssh-server -y && \
 COPY remote-key.pub /home/remote_user/.ssh/authorized_keys
 RUN chown remote_user:remote_user -R /home/remote_user/.ssh && \
     chmod 600 /home/remote_user/.ssh/authorized_keys && \
-    yum install mysql && \
+    yum -y install mysql && \
     yum -y install epel-release && \
     yum -y install python3-pip && \
     pip3 install --upgrade pip && \
