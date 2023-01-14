@@ -7,7 +7,7 @@ services:
     - 8080:8080
     volumes:
     - ${HOME}/jenkins/jenkins-data:/var/jenkins_home
-    network:
+    networks:
     - net
 networks:
   net:
