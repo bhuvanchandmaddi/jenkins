@@ -12,6 +12,8 @@ services:
   remote_host:
     container_name: remote-host
     image: docker-host
+    volumes:
+      - ${HOME}/jenkins/installation/aws-s3.sh:/tmp/aws-s3.sh
     build:
       context: .
     networks:
