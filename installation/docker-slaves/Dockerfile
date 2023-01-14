@@ -1,5 +1,5 @@
 FROM centos:7
-RUN install openssh-server && \
+RUN yum install openssh-server -y && \
     useradd remote_user && \
     echo "password" | passwd remote_user --stdin && \
     mkdir /home/remote_user/.ssh && \
