@@ -10,4 +10,4 @@ services:
     network:
     - net
 networks:
-
+  net:
