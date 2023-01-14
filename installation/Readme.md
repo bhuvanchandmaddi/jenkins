@@ -28,5 +28,15 @@ systemctl enable jenkins***
 * sudo chmod +x /usr/local/bin/docker-compose
 * docker-compose version
 
->#### Integration with docker:
+>#### Jenkins installation setup with dockercompose:
+* To install docker
+docker-compose up -d
+
+>#### Install remote-host with dockercompose:
+* Created dockerfile in dockerslaves/
+* Created ssh keys and copied public key to conatiner
+* Added private key in jenkins and created a jenkins creds with that
+* Inatlled ssh plugin
+* configured ssh to run basic task in remote shell
+* Finally executed docker-compose up -d, which launches 2 conatiners
 
