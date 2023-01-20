@@ -21,6 +21,7 @@ or
 systemctl enable jenkins***
 * Add user jenkins to docker group
 ***sudo usermod -a -G docker jenkins***
+
 **Note:** You should then be able to run all of the docker commands without requiring sudo. After running the 4th command I did need to logout and log back in for the change to take effec
 
 >#### Installing docker compose
@@ -31,6 +32,10 @@ systemctl enable jenkins***
 >#### Jenkins installation setup with dockercompose:
 * To install docker
 docker-compose up -d
+
+**Note:** Most ot the time you will get permissions issues.This is because, the /var/jenkins_home directory inside container is owned by jenkins user with uid 1000.So if you want to link a volume make sure the directory should be owned by user with same uid(i.e 1000).Here user is not important but only uid is important.Even if same uid is used by other user.
+
+> sudo chown -R 1000:1000 <location on ec2-instance>
 
 >#### Install remote-host with dockercompose:
 * Created dockerfile in dockerslaves/
