@@ -41,7 +41,7 @@ docker-compose up -d
 * Created dockerfile in dockerslaves/
 * Created ssh keys and copied public key to conatiner
 * Added private key in jenkins and created a jenkins creds with that
-* Inatlled ssh plugin
+* Install ssh plugin
 * configured ssh to run basic task in remote shell
 * Finally executed docker-compose up -d, which launches 2 conatiners
 

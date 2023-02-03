@@ -33,3 +33,17 @@ After docker compose up -d, execute below commands to create testdata which is u
  insert into info values('jai balayya','nandamuri',60);
  10. To view data in the table
  > select * from info;
+
+ >### Execution of the project
+ * Since we updated the project, build the docker-compose using docker-comoose build
+ * Create aws bucket
+ * Create parameters(String parameters) for all the variables used in aws-s3.sh script
+* Create secret(Build Environment ->use secret text/file) for the aws secret and database password
+
+* Build steps -> Execute shell script on remote host using ssh -> select ssh remote host and paste below script
+
+```code
+/tmp/aws-s3.sh $DB_HOST $DB_PASSWORD $DB_NAME $AWS_SECRET $BUCKET_NAME
+```
+* Execute the pipeline with parameters
+* Verify the mysql backup file should be uploaded to aws bucket
