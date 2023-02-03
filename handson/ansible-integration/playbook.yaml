@@ -1,0 +1,10 @@
+- hosts: test1
+  vars:
+    key: value
+  tasks:
+  - name: shell module to execute echo cmd
+    shell: echo "Hello world. This is Bhuvan chand Maddi" >>/tmp/test
+  - name: debug module
+    debug: 
+      msg: "{{ key }}"
+ 
