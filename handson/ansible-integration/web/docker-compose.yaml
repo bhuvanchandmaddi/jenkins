@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web:
+    container_name: web
+    image: web-server
+    build:
+      context: .
+    ports:
+    - 80:80
+    networks:
+    - net
+networks:
+  net:
+

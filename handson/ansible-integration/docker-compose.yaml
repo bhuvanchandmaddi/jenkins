@@ -28,5 +28,14 @@ services:
       - ${HOME}/jenkins/db_data:/var/lib/mysql
     networks:
     - net
+  web:
+    container_name: web
+    image: web-server
+    build:
+      context: web
+    ports:
+    - 80:80
+    networks:
+    - net
 networks:
   net:
