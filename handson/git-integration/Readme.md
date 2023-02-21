@@ -36,3 +36,11 @@ Lets trigger this job when we make any commits to our project using webhooks
 * Create a role with read and build permissions to jobs, assign that role to gitlab user
 * Now in gitlab server, navigate to settings -> Integration -> Jenkins
 * Enter the jenkins url, project name and username and password(The one we created above for this purpose)
+* Navigate to jenkins and install 2 plugins(GitLab and Gitlab Hook)
+* Configure project -> Git -> Select the repository as gitlab and specify the gitlab url again and give any random version
+* Select checkbox under Build triggers -> Build when a change is pushed to GitLab. GitLab webhook URL: <jenkins>/project/MavenProject
+* Now make any change in the project, a build should be trigerred automatically
+
+video reference: [Setup Gitlab Webhook Integration with Jenkins](https://www.youtube.com/watch?v=65hrCvYMLqo&t=636s)
+
+Note: Follow steps mentioned [here](https://www.blazemeter.com/blog/how-to-integrate-your-github-repository-to-your-jenkins-project) blog if youwant to create web hooks for github
