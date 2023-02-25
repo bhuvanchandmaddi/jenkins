@@ -1,3 +1,5 @@
 jenkins-data/*
 
 db_data/*
+
+pipeline/jenkins-data/*
